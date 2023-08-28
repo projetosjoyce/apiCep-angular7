@@ -1,0 +1,45 @@
+<div class="container col-3 p-5 ">
+  <div class="card row justify-content-md-center">
+    <h5 class="card-header text-center">CEP API</h5>
+    <div class="card-body">
+      <form #f="ngForm" class="form-inline">
+        <div class="Form-group">
+          <br>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text" for="cep">CEP</div>
+            </div>
+            <input type="text" class="form-control  col-md-9" placeholder="Digite seu CEP" id="cep" name="cep" ngModel
+              #cep="ngModel" (blur)="consultarCep($event.target.value,f)">
+          </div>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text" for="logradouro">Logradouro</div>
+            </div>
+            <input type="text" class="Form-control  col-md-7" id="logradouro" name="logradouro" ngModel #logradouro="ngModel"
+              disabled>
+          </div>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text" for="bairro">Bairro</div>
+            </div>
+            <input type="text" class="Form-control col-md-8" id="bairro" name="bairro" ngModel #bairro="ngModel" disabled>
+          </div>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text" for="localidade">Localidade</div>
+            </div>
+            <input type="text" class="Form-control " id="localidade" name="localidade" ngModel #localidade="ngModel"
+              disabled>
+          </div>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text" for="uf">UF</div>
+            </div>
+            <input type="text" class="Form-control col-md-9" id="uf" name="uf" ngModel #uf="ngModel" disabled>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
